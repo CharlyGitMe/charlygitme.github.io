@@ -1,0 +1,1 @@
+<img {{ $attributes->merge(['class' => 'mx-2 pt-4 w-14 md:w-20 inline-flex']) }}>
