@@ -230,3 +230,7 @@ body {
 #submit-btn:hover {
   background-color: #2b385a;
 }
+
+.grecaptcha-badge {
+  bottom: 100px !important;
+}
