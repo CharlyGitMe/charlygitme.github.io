@@ -13,27 +13,32 @@
  emailjs.init('zp6T_hnyP0J9B8T-v');
 
   function onSubmit(token) {
-    // Check the honeypot field
-    let hnpt = document.getElementById('hnpt').value;
-    if (hnpt) {
-      alert('Spam detected. Please do not fill out hidden fields.');
-      return;
+      // Check the honeypot field
+      let hnpt = document.getElementById('hnpt').value;
+      if (hnpt) {
+        alert('Spam detected. Please do not fill out hidden fields.');
+        return;
+      }
+
+      // Show loader and hide success message initially
+      document.getElementById('loader').style.display = 'block';
+      document.getElementById('success-message').style.display = 'none';
+
+      // Proceed with form submission after reCAPTCHA validation
+      emailjs.sendForm('resume_service', 'resume_form', document.getElementById('resume-form'))
+        .then(() => {
+          console.log('SUCCESS!');
+          // Hide loader and show success message
+          document.getElementById('loader').style.display = 'none';
+          document.getElementById('success-message').style.display = 'block';
+          document.getElementById('resume-form').reset(); // Clear the form
+        }, (error) => {
+          console.log('FAILED...', error);
+          // Hide loader and show an alert
+          document.getElementById('loader').style.display = 'none';
+          alert('Failed to send email. Please try again.');
+        });
     }
-
-    document.getElementById('spinner').style.display = 'block';
-    document.getElementById('success-message').style.display = 'none';
-
-    // Proceed with form submission after reCAPTCHA validation
-    emailjs.sendForm('resume_service', 'resume_form', document.getElementById('resume-form'))
-      .then(() => {
-        document.getElementById('spinner').style.display = 'none';
-        document.getElementById('success-message').style.display = 'block';
-        document.getElementById('resume-form').reset();
-      }, (error) => {
-        document.getElementById('spinner').style.display = 'none';
-        alert('Failed to send email. Please try again.');
-      });
-  }
 </script>
 </head>
 <body>
@@ -106,7 +111,7 @@
 </div>
 
 <!-- Add Contact (email!)-->
-<footer class="bg-white mt-48 rounded-lg shadow m-4 dark:bg-gray-800">
+<footer class="bg-white mt-40 rounded-lg shadow m-4 dark:bg-gray-800">
   <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
         class="hover:underline">Charlene Kochanski</a>. All Rights Reserved.
