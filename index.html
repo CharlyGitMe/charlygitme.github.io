@@ -37,17 +37,30 @@
       <a href="/request"
         class="hidden py-2 px-4 text-white text-lg bg-emerald-600 rounded-full baseline hover:bg-emerald-700 transition md:block my-auto">Request
         Resume</a>
-  
-      <!--Hamburger Icon-->
-      <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+    </div>
+  </nav>
+
+    <!--MOBILE NAV-->
+    <nav class="text-white absolute top-10 right-10 p-4 md:hidden">
+      <button class="hamburger flex flex-col items-center justify-center" id="menu-btn">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
         <span class="hamburger-bottom"></span>
       </button>
-    </div>
-  </nav>
+    </nav>
+
+
+    <!--Mobile Black Navbar-->
+    <nav id="menu" class="hidden md:hidden justify-end py-4">
+      <ul class="text-white pe-14 space-y-2">
+        <li><a href="/#about" class="text-lg hover:text-pink-700 transition">About Me</a></li>
+        <li><a href="/#skills" class="text-lg hover:text-pink-700 transition">Skills</a></li>
+        <li><a href="/#projects" class="text-lg hover:text-pink-700 transition">Projects</a></li>
+      </ul>
+    </nav>
+
   <section id="about">
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-40 text-white">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:mt-40 text-white">
       <div class="p-10 md:p-20">
         <h1 class="text-4xl md:text-6xl">Hi, I'm</h1>
           <svg id="Name" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
