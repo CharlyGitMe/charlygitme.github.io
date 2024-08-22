@@ -5,9 +5,8 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   font-family: monospace;
-
 }
 
 
@@ -218,4 +217,16 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#resume-form {
+  background-color: #7C87A6;
+}
+
+#submit-btn {
+ background-color: #212B46;
+}
+
+#submit-btn:hover {
+  background-color: #2b385a;
 }
