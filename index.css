@@ -219,15 +219,15 @@ body {
   }
 }
 
-#resume-form {
+#form-section {
   background-color: #7C87A6;
 }
 
-#submit-btn {
+#submit-btn, #return-btn {
  background-color: #212B46;
 }
 
-#submit-btn:hover {
+#submit-btn:hover, #return-btn:hover {
   background-color: #2b385a;
 }
 
