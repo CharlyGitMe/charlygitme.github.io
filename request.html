@@ -20,14 +20,17 @@
       return;
     }
 
+    document.getElementById('spinner').style.display = 'block';
+    document.getElementById('success-message').style.display = 'none';
+
     // Proceed with form submission after reCAPTCHA validation
     emailjs.sendForm('resume_service', 'resume_form', document.getElementById('resume-form'))
       .then(() => {
-        console.log('SUCCESS!');
-        alert('Email sent successfully!');
-        document.getElementById('resume-form').reset(); // Clear the form
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+        document.getElementById('resume-form').reset();
       }, (error) => {
-        console.log('FAILED...', error);
+        document.getElementById('spinner').style.display = 'none';
         alert('Failed to send email. Please try again.');
       });
   }
@@ -89,7 +92,15 @@
     data-sitekey="6Le6hiwqAAAAADkofeE9Qm4SAJsCdWTysVOymlp6" data-callback="onSubmit">
     Submit
   </button>
+  <div class="loader" style="display: none;">
+  </div>
+  <div id="success-message" class="text-lg" style="display: none;">
+    Thanks for requesting my resume! Check your email folder within the next 24h to hear back!
+  </div>
 </form>
+
+
+
 <div class="flex justify-center mt-10 text-white mx-4">
   <p class="text-lg">Note: Requests may take up to 24h, please check your spam folder!</p>
 </div>
