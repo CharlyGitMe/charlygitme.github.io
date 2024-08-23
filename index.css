@@ -225,6 +225,7 @@ body {
 
 #form-section {
   background-color: #7C87A6;
+  min-width: 400px;
 }
 
 #submit-btn, #return-btn {

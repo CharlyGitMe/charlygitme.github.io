@@ -47,7 +47,7 @@
     <!--Logo-->
     <div class="ps-10">
       <a href="/">
-        <img src="/imgs/CK_LogoFINAL.png" alt="" class="w-32">
+        <img src="/imgs/CK_LogoFINAL.png" alt="" class="hidden md:block w-32">
       </a>
     </div>
     <!--Menu Items-->
@@ -62,12 +62,18 @@
         <a class="hover:text-emerald-600 transition" href="/#projects">Projects</a>
       </li>
     </ul>
-    <button class="hamburger pe-6 pb-4 top-10 md:hidden me-20 menu-btn">
-      <span class="hamburger-top"></span>
-      <span class="hamburger-middle"></span>
-      <span class="hamburger-bottom"></span>
-    </button>
   </div>
+</nav>
+
+<nav class="flex items-center justify-between px-11 py-2">
+  <a href="/">
+    <img src="/imgs/CK_LogoFINAL.png" alt="" class="md:hidden w-24">
+  </a>
+      <button class="hamburger pe-6 pb-4 md:hidden menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
 </nav>
 
     <nav class="hidden md:hidden justify-center py-4 bg-slate-700 mt-2 menu">
@@ -80,10 +86,10 @@
 
 
 <!-- Note: Since github pages does not support email sending, I am currently using EmailJS -->
-<div class="max-w-sm mx-auto mt-20 text-white">
+<div class="mx-auto mt-20 text-white">
   <h1 class="text-4xl">Request my Resume</h1>
 </div>
-<section class="max-w-sm mx-auto mt-10 p-10 rounded shadow-md" id="form-section">
+<section class="mx-auto mt-10 p-10 rounded shadow-md" id="form-section">
   <form id="resume-form">
     <div class="mb-5">
       <label for="busname" class="block mb-2 text-sm font-medium text-gray-900">Your Business Name</label>
@@ -116,7 +122,7 @@
   <a href="/" id="return-btn" class="button cursor-pointer text-white font-medium rounded-lg w-full sm:w-auto px-3 py-1 text-center transition">Return</a>
 </div>
 </section>
-<div class="flex justify-center mt-10 text-white mx-4">
+<div class="flex justify-center mt-10 text-white mx-4 mb-10">
   <p class="text-lg">Note: Requests may take up to 24h, please check your spam folder!</p>
 </div>
 
