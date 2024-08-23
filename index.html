@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>CK Portfolio</title>
   <link rel="stylesheet" href="index.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
@@ -13,15 +13,16 @@
 </head>
 
 <body>
-  <nav class="relative container mx-auto pt-6">
+  <nav class="relative container pt-6 px-4">
     <!--Flex Container-->
     <div class="flex justify-between">
       <!--Logo-->
       <a href="/">
-        <img src="/imgs/CK_LogoFINAL.png" alt="" class="w-32">
+        <img src="/imgs/CK_LogoFINAL.png" alt="" class="hidden lg:block w-32">
       </a>
+
       <!--Menu Items-->
-      <ul class="hidden text-lg md:flex space-x-20 my-auto text-white">
+      <ul class="hidden text-lg lg:flex space-x-10 lg:space-x-20 my-auto text-white">
         <li>
           <a class="hover:text-emerald-600 transition" href="/#about">About Me</a>
         </li>
@@ -35,23 +36,34 @@
       <!--Button-->
       <!-- Add logic for requesting the resume-->
       <a href="/request"
-        class="hidden py-2 px-4 text-white text-lg bg-emerald-600 rounded-full baseline hover:bg-emerald-700 transition md:block my-auto">Request
+        class="hidden py-2 px-4 text-white text-lg bg-emerald-600 rounded-full baseline hover:bg-emerald-700 transition lg:block my-auto">Request
         Resume</a>
     </div>
   </nav>
 
     <!--MOBILE NAV-->
-    <nav class="text-white absolute top-10 right-10 p-4 md:hidden">
-      <button class="hamburger flex flex-col items-center justify-center" id="menu-btn">
-        <span class="hamburger-top"></span>
-        <span class="hamburger-middle"></span>
-        <span class="hamburger-bottom"></span>
-      </button>
+    <nav class="flex justify-around">
+      <a href="/">
+        <img src="/imgs/CK_LogoFINAL.png" alt="" class="lg:hidden w-32">
+      </a>
+      <a href="/request"
+        class="py-2 px-4 text-white text-lg bg-emerald-600 rounded-full baseline hover:bg-emerald-700 transition lg:hidden my-auto">Request
+        Resume
+      </a>
+        <button class="hamburger pe-6 pb-4 top-8 lg:hidden" id="menu-btn" >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
     </nav>
 
 
+
+
+
+
     <!--Mobile Black Navbar-->
-    <nav id="menu" class="hidden md:hidden justify-center py-4 bg-slate-700 mt-2">
+    <nav id="menu" class="hidden lg:hidden justify-center py-4 bg-slate-700 mt-2">
       <ul class="text-white pe-14 space-y-2">
         <li><a href="/#about" class="text-lg hover:text-pink-700 transition">About Me</a></li>
         <li><a href="/#skills" class="text-lg hover:text-pink-700 transition">Skills</a></li>
@@ -60,9 +72,9 @@
     </nav>
 
   <section id="about">
-    <div class="grid grid-cols-1 md:grid-cols-2 md:mt-40 text-white">
-      <div class="p-10 md:p-20">
-        <h1 class="text-4xl md:text-6xl">Hi, I'm</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 lg:mt-20 text-white">
+      <div class="p-10 lg:px-20">
+        <h1 class="text-4xl lg:text-6xl">Hi, I'm</h1>
           <svg id="Name" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
             <path
               d="m64.02,87.39c2.42-4.29,5.73-7.65,9.91-10.07,4.19-2.42,8.83-3.63,13.94-3.63,6,0,11.24,1.45,15.72,4.34,4.48,2.9,7.74,7.01,9.8,12.32h-8.61c-1.53-3.32-3.73-5.87-6.6-7.66-2.87-1.79-6.31-2.69-10.31-2.69s-7.3.9-10.35,2.69c-3.06,1.79-5.45,4.33-7.19,7.62-1.74,3.29-2.61,7.15-2.61,11.57s.87,8.2,2.61,11.49c1.74,3.29,4.13,5.83,7.19,7.62,3.05,1.79,6.5,2.69,10.35,2.69s7.44-.88,10.31-2.65c2.87-1.76,5.07-4.31,6.6-7.62h8.61c-2.05,5.27-5.32,9.34-9.8,12.21-4.48,2.87-9.72,4.31-15.72,4.31-5.11,0-9.76-1.2-13.94-3.59-4.19-2.4-7.49-5.73-9.91-9.99-2.42-4.27-3.63-9.09-3.63-14.46s1.21-10.2,3.63-14.5Z"
@@ -116,18 +128,27 @@
         <h6 class="text-2xl mt-6">No non-sense Fullstack Developer providing fast + secure websites for all types of
           businesses!</h6>
       </div>
+      <div class="px-10 lg:mt-24">
+        <p class="text-sm">
+          Surrounded by friends in the industry, it was my early 20’s when I realized I not only had a knack for coding, but I
+          enjoyed it. I threw myself into learning the basics, and shortly after discovered the Laravel Framework, which motivated me to focus on PHP. Laravel to this day greatly appeals to me however, I have been working on my Javascript and React knowledge due to their popularity.
+          <br><br>
+          With a passion for coding and an eye for visual appeal, I take satisfaction in producing websites that are functioning,
+          engaging, and secure.
+        </p>
+      </div>
 
     </div>
 
   </section>
 
-  <section id="skills" class="pt-20">
+  <section id="skills" class="pt-20 px-10">
     <div class="mx-auto text-white">
       <h2 class="text-4xl text-center mt-20">"Coding is a piece of cake!"</h2>
       <h4 class="text-2xl text-center"> Hover over cake layers to view individual skills.</h4>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="skills-img">
         <svg class="mx-auto mt-32" id="cake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2901.36 1750.58">
           <g style="isolation: isolate;">
@@ -274,18 +295,18 @@
         </svg>
       </div>
 
-      <div class="skills-txt text-center md:text-start my-auto text-white mb-20 pt-2 md:pt-20">
-        <div class="section frontend text-2xl md:text-3xl pt-2">
+      <div class="skills-txt text-center lg:text-start my-auto text-white mb-20 pt-2 lg:pt-20">
+        <div class="section frontend text-2xl lg:text-3xl pt-2">
           <h3>Frontend</h3>
           <div id="frontend"></div>
         </div>
 
-        <div class="section tools text-2xl md:text-3xl pt-2">
+        <div class="section tools text-2xl lg:text-3xl pt-2">
           <h3>Tools</h3>
           <div id="tools"></div>
         </div>
 
-        <div class="section backend text-2xl md:text-3xl pt-2">
+        <div class="section backend text-2xl lg:text-3xl pt-2">
           <h3>Backend</h3>
           <div id="backend"></div>
         </div>
@@ -298,14 +319,14 @@
     :githubLink="$project['githubLink']" :liveSiteLink="$project['liveSiteLink']" />
   @endforeach -->
 
-  <section id="projects" class="py-16 mt-20">
+  <section id="projects" class="py-16 mt-20 px-10">
     <div class="container mx-auto">
       <h2 class="text-4xl mb-8 text-white">Completed Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Portfolio Item 1 -->
         <div
           class="bg-zinc-700 p-6 rounded-lg shadow transition duration-300 ease-in-out transform hover:-translate-y-2">
-          <!-- <img src="/images/PW_Site_1.png" alt="Project 1" class="mb-4 rounded-md"> -->
+          <!-- <img src="/images/PW_Site_1.png" alt="Project 1" class="mb-4 rounded-lg"> -->
           <h3 class="text-xl text-white font-semibold mb-2">First Website</h3>
           <p class="text-gray-200">Completely rebuilt the webpage of an Automotive business, which included building a
             blog app that has an admin login with fully-functional CRUD. This was my first website ever created.</p>
@@ -326,13 +347,13 @@
   </section>
 <!-- Add Contact (email!)-->
 <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+  <div class="w-full mx-auto max-w-screen-xl p-4 lg:flex lg:items-center lg:justify-between">
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
         class="hover:underline">Charlene Kochanski</a>. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
       <li>
-        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+        <a href="#" class="hover:underline me-4 lg:me-6">About</a>
       </li>
       <li>
         <a href="#" class="hover:underline">Contact</a>
