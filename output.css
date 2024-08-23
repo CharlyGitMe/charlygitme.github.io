@@ -1442,6 +1442,12 @@ body {
   }
 }
 
+@media (min-width: 1280px) {
+  .xl\:mt-20 {
+    margin-top: 5rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:bg-gray-800 {
     --tw-bg-opacity: 1;
