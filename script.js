@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   skills.forEach(skill => {
     const img = document.createElement('img');
     img.src = `./imgs/${skill}_Logo.png`;
-    img.className = 'mx-2 pt-4 w-20 inline-flex';
+    img.className = 'mx-2 pt-2 w-20 inline-flex skill-imgs';
 
     frontend.appendChild(img);
   });
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   skills.forEach(skill => {
     const img = document.createElement('img');
     img.src = `./imgs/${skill}_Logo.png`;
-    img.className = 'mx-2 pt-4 w-20 inline-flex';
+    img.className = 'mx-2 pt-2 w-20 inline-flex skill-imgs';
 
     tools.appendChild(img);
   });
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   skills.forEach(skill => {
     const img = document.createElement('img');
     img.src = `./imgs/${skill}_Logo.png`;
-    img.className = 'mx-2 pt-4 w-20 inline-flex';
+    img.className = 'mx-2 pt-2 w-20 inline-flex skill-imgs';
 
     backend.appendChild(img);
   });
