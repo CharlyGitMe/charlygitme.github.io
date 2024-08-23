@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skills.forEach(skill => {
     const img = document.createElement('img');
-    img.src = `../imgs/${skill}_Logo.png`;
+    img.src = `./imgs/${skill}_Logo.png`;
     img.className = 'mx-2 pt-4 w-20 inline-flex';
 
     frontend.appendChild(img);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skills.forEach(skill => {
     const img = document.createElement('img');
-    img.src = `../imgs/${skill}_Logo.png`;
+    img.src = `./imgs/${skill}_Logo.png`;
     img.className = 'mx-2 pt-4 w-20 inline-flex';
 
     tools.appendChild(img);
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skills.forEach(skill => {
     const img = document.createElement('img');
-    img.src = `../imgs/${skill}_Logo.png`;
+    img.src = `./imgs/${skill}_Logo.png`;
     img.className = 'mx-2 pt-4 w-20 inline-flex';
 
     backend.appendChild(img);
