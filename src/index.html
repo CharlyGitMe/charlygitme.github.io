@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CK Portfolio</title>
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+  
+</head>
+
+<body>
+  <nav class="pt-6 px-10">
+    <!--Flex Container-->
+    <div class="flex justify-between">
+      <!--Logo-->
+      <a href="/index.html">
+        <img src="../imgs/CK_LogoFINAL.png" alt="" class="hidden md:block w-32">
+      </a>
+
+      <!--Menu Items-->
+      <ul class="hidden text-lg md:flex space-x-10 md:space-x-20 my-auto text-white">
+        <li>
+          <a class="hover:text-emerald-600 transition" href="./index.html#about">About Me</a>
+        </li>
+        <li>
+          <a class="hover:text-emerald-600 transition" href="./index.html#skills">Skills</a>
+        </li>
+        <li>
+          <a class="hover:text-emerald-600 transition" href="./index.html#projects">Projects</a>
+        </li>
+      </ul>
+      <!--Button-->
+      <!-- Add logic for requesting the resume-->
+      <a href="./request.html"
+        class="hidden py-2 px-4 text-white text-lg bg-emerald-600 rounded-full baseline hover:bg-emerald-700 transition md:block my-auto">Request
+        Resume</a>
+    </div>
+  </nav>
+
+    <!--MOBILE NAV-->
+    <nav class="flex justify-around">
+      <a href="/index.html">
+        <img src="../imgs/CK_LogoFINAL.png" alt="" class="md:hidden w-32">
+      </a>
+      <a href="./request.html"
+        class="py-2 px-4 text-white text-lg bg-emerald-600 rounded-full baseline hover:bg-emerald-700 transition md:hidden my-auto">Request
+        Resume
+      </a>
+        <button class="hamburger pe-6 pb-4 top-8 md:hidden menu-btn">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+    </nav>
+
+    <!--Mobile Navbar-->
+    <nav class="hidden md:hidden justify-center py-4 bg-slate-700 mt-2 menu">
+      <ul class="text-white pe-14 space-y-2">
+        <li><a href="./index.html#about" class="text-lg hover:text-pink-700 transition">About Me</a></li>
+        <li><a href="./index.html#skills" class="text-lg hover:text-pink-700 transition">Skills</a></li>
+        <li><a href="./index.html#projects" class="text-lg hover:text-pink-700 transition">Projects</a></li>
+      </ul>
+    </nav>
+
+  <section id="about">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-20 text-white">
+      <div class="p-10 md:px-20">
+        <h1 class="text-4xl md:text-6xl">Hi, I'm</h1>
+          <svg id="Name" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+            <path
+              d="m64.02,87.39c2.42-4.29,5.73-7.65,9.91-10.07,4.19-2.42,8.83-3.63,13.94-3.63,6,0,11.24,1.45,15.72,4.34,4.48,2.9,7.74,7.01,9.8,12.32h-8.61c-1.53-3.32-3.73-5.87-6.6-7.66-2.87-1.79-6.31-2.69-10.31-2.69s-7.3.9-10.35,2.69c-3.06,1.79-5.45,4.33-7.19,7.62-1.74,3.29-2.61,7.15-2.61,11.57s.87,8.2,2.61,11.49c1.74,3.29,4.13,5.83,7.19,7.62,3.05,1.79,6.5,2.69,10.35,2.69s7.44-.88,10.31-2.65c2.87-1.76,5.07-4.31,6.6-7.62h8.61c-2.05,5.27-5.32,9.34-9.8,12.21-4.48,2.87-9.72,4.31-15.72,4.31-5.11,0-9.76-1.2-13.94-3.59-4.19-2.4-7.49-5.73-9.91-9.99-2.42-4.27-3.63-9.09-3.63-14.46s1.21-10.2,3.63-14.5Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m154.39,87.47c2.63,1.4,4.7,3.49,6.2,6.28,1.5,2.79,2.25,6.19,2.25,10.19v25.52h-7.11v-24.49c0-4.32-1.08-7.62-3.24-9.91-2.16-2.29-5.11-3.44-8.85-3.44s-6.81,1.19-9.05,3.55c-2.24,2.37-3.36,5.82-3.36,10.35v23.94h-7.19v-58.46h7.19v21.33c1.42-2.21,3.38-3.92,5.89-5.14,2.5-1.21,5.31-1.82,8.41-1.82,3.27,0,6.21.7,8.85,2.09Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m174.62,96c1.79-3.34,4.25-5.94,7.39-7.78,3.13-1.84,6.62-2.77,10.47-2.77s7.08.82,9.88,2.45c2.79,1.63,4.87,3.69,6.24,6.16v-7.9h7.27v43.29h-7.27v-8.06c-1.42,2.53-3.54,4.62-6.36,6.28-2.82,1.66-6.1,2.49-9.84,2.49s-7.32-.95-10.43-2.84c-3.11-1.9-5.56-4.55-7.35-7.98-1.79-3.42-2.69-7.32-2.69-11.69s.9-8.31,2.69-11.65Zm32,3.2c-1.32-2.42-3.09-4.28-5.33-5.57-2.24-1.29-4.7-1.94-7.39-1.94s-5.13.63-7.35,1.9c-2.21,1.26-3.98,3.11-5.29,5.53-1.32,2.42-1.98,5.27-1.98,8.53s.66,6.2,1.98,8.65c1.32,2.45,3.08,4.32,5.29,5.61,2.21,1.29,4.66,1.94,7.35,1.94s5.15-.64,7.39-1.94c2.24-1.29,4.02-3.16,5.33-5.61,1.32-2.45,1.98-5.31,1.98-8.57s-.66-6.11-1.98-8.53Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m240.62,87.43c2.34-1.37,5.2-2.05,8.57-2.05v7.43h-1.9c-8.06,0-12.09,4.37-12.09,13.11v23.54h-7.19v-43.29h7.19v7.03c1.26-2.47,3.07-4.4,5.41-5.77Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path d="m264.67,71v58.46h-7.19v-58.46h7.19Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m316.18,110.5h-34.6c.26,4.27,1.72,7.6,4.38,9.99,2.66,2.4,5.89,3.59,9.68,3.59,3.11,0,5.7-.72,7.78-2.17,2.08-1.45,3.54-3.38,4.38-5.81h7.74c-1.16,4.16-3.48,7.54-6.95,10.15-3.48,2.61-7.8,3.91-12.96,3.91-4.11,0-7.78-.92-11.02-2.76-3.24-1.84-5.78-4.46-7.62-7.86-1.84-3.4-2.77-7.33-2.77-11.81s.9-8.4,2.69-11.77c1.79-3.37,4.31-5.96,7.54-7.78,3.24-1.82,6.96-2.73,11.18-2.73s7.74.9,10.9,2.69c3.16,1.79,5.6,4.25,7.31,7.39,1.71,3.13,2.57,6.68,2.57,10.63,0,1.37-.08,2.82-.24,4.34Zm-9.01-12.92c-1.21-1.98-2.86-3.48-4.94-4.5-2.08-1.03-4.38-1.54-6.91-1.54-3.63,0-6.73,1.16-9.28,3.48-2.56,2.32-4.02,5.53-4.38,9.64h27.33c0-2.74-.61-5.1-1.82-7.07Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m359.79,90.16c3.26,3.19,4.9,7.78,4.9,13.79v25.52h-7.11v-24.49c0-4.32-1.08-7.62-3.24-9.91-2.16-2.29-5.11-3.44-8.85-3.44s-6.81,1.19-9.05,3.55c-2.24,2.37-3.36,5.82-3.36,10.35v23.94h-7.19v-43.29h7.19v6.16c1.42-2.21,3.36-3.92,5.81-5.14,2.45-1.21,5.15-1.82,8.1-1.82,5.27,0,9.53,1.59,12.8,4.78Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m415.72,110.5h-34.6c.26,4.27,1.72,7.6,4.38,9.99,2.66,2.4,5.89,3.59,9.68,3.59,3.11,0,5.7-.72,7.78-2.17,2.08-1.45,3.54-3.38,4.38-5.81h7.74c-1.16,4.16-3.48,7.54-6.95,10.15-3.47,2.61-7.79,3.91-12.96,3.91-4.11,0-7.78-.92-11.02-2.76-3.24-1.84-5.78-4.46-7.62-7.86-1.84-3.4-2.77-7.33-2.77-11.81s.9-8.4,2.69-11.77c1.79-3.37,4.31-5.96,7.54-7.78,3.24-1.82,6.96-2.73,11.18-2.73s7.74.9,10.9,2.69c3.16,1.79,5.6,4.25,7.31,7.39,1.71,3.13,2.57,6.68,2.57,10.63,0,1.37-.08,2.82-.24,4.34Zm-9.01-12.92c-1.21-1.98-2.86-3.48-4.94-4.5-2.08-1.03-4.38-1.54-6.91-1.54-3.63,0-6.73,1.16-9.28,3.48-2.56,2.32-4.02,5.53-4.38,9.64h27.33c0-2.74-.61-5.1-1.82-7.07Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path d="m476.39,129.46l-22.67-25.12v25.12h-7.19v-55.06h7.19v25.52l22.75-25.52h9.08l-24.96,27.57,25.2,27.49h-9.4Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m501.71,127.41c-3.29-1.84-5.87-4.46-7.74-7.86-1.87-3.4-2.8-7.33-2.8-11.81s.96-8.33,2.88-11.73c1.92-3.4,4.54-6,7.86-7.82,3.32-1.82,7.03-2.73,11.14-2.73s7.82.91,11.14,2.73c3.32,1.82,5.94,4.41,7.86,7.78,1.92,3.37,2.88,7.3,2.88,11.77s-.99,8.41-2.96,11.81c-1.97,3.4-4.65,6.02-8.02,7.86-3.37,1.84-7.11,2.76-11.22,2.76s-7.73-.92-11.02-2.76Zm18.29-5.37c2.26-1.21,4.09-3.03,5.49-5.45,1.39-2.42,2.09-5.37,2.09-8.85s-.69-6.42-2.05-8.85c-1.37-2.42-3.16-4.23-5.37-5.41s-4.61-1.78-7.19-1.78-5.04.59-7.23,1.78c-2.19,1.19-3.94,2.99-5.25,5.41-1.32,2.42-1.97,5.37-1.97,8.85s.64,6.5,1.94,8.93c1.29,2.42,3.01,4.23,5.17,5.41,2.16,1.19,4.53,1.78,7.11,1.78s5-.61,7.27-1.82Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m544.41,96c1.79-3.34,4.28-5.94,7.47-7.78,3.19-1.84,6.83-2.77,10.94-2.77,5.32,0,9.7,1.29,13.15,3.87,3.45,2.58,5.73,6.16,6.83,10.74h-7.74c-.74-2.63-2.17-4.71-4.31-6.24-2.13-1.53-4.78-2.29-7.94-2.29-4.11,0-7.43,1.41-9.95,4.23-2.53,2.82-3.79,6.81-3.79,11.97s1.26,9.24,3.79,12.09,5.85,4.27,9.95,4.27c3.16,0,5.79-.74,7.9-2.21,2.11-1.47,3.56-3.58,4.35-6.32h7.74c-1.16,4.42-3.48,7.97-6.95,10.62-3.48,2.66-7.82,3.99-13.04,3.99-4.11,0-7.76-.92-10.94-2.76-3.19-1.84-5.68-4.45-7.47-7.82-1.79-3.37-2.69-7.32-2.69-11.85s.89-8.39,2.69-11.73Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m622.7,87.47c2.63,1.4,4.7,3.49,6.2,6.28,1.5,2.79,2.25,6.19,2.25,10.19v25.52h-7.11v-24.49c0-4.32-1.08-7.62-3.24-9.91-2.16-2.29-5.11-3.44-8.85-3.44s-6.81,1.19-9.04,3.55c-2.24,2.37-3.36,5.82-3.36,10.35v23.94h-7.19v-58.46h7.19v21.33c1.42-2.21,3.38-3.92,5.88-5.14,2.5-1.21,5.31-1.82,8.41-1.82,3.26,0,6.21.7,8.85,2.09Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m642.92,96c1.79-3.34,4.25-5.94,7.39-7.78,3.13-1.84,6.62-2.77,10.47-2.77s7.08.82,9.88,2.45c2.79,1.63,4.87,3.69,6.24,6.16v-7.9h7.27v43.29h-7.27v-8.06c-1.42,2.53-3.54,4.62-6.36,6.28-2.82,1.66-6.1,2.49-9.83,2.49s-7.32-.95-10.43-2.84c-3.11-1.9-5.56-4.55-7.35-7.98-1.79-3.42-2.69-7.32-2.69-11.69s.89-8.31,2.69-11.65Zm32,3.2c-1.32-2.42-3.09-4.28-5.33-5.57-2.24-1.29-4.7-1.94-7.39-1.94s-5.14.63-7.35,1.9c-2.21,1.26-3.98,3.11-5.29,5.53-1.32,2.42-1.97,5.27-1.97,8.53s.66,6.2,1.97,8.65,3.08,4.32,5.29,5.61c2.21,1.29,4.66,1.94,7.35,1.94s5.15-.64,7.39-1.94c2.24-1.29,4.02-3.16,5.33-5.61,1.32-2.45,1.97-5.31,1.97-8.57s-.66-6.11-1.97-8.53Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m730.22,90.16c3.27,3.19,4.9,7.78,4.9,13.79v25.52h-7.11v-24.49c0-4.32-1.08-7.62-3.24-9.91-2.16-2.29-5.11-3.44-8.85-3.44s-6.81,1.19-9.04,3.55c-2.24,2.37-3.36,5.82-3.36,10.35v23.94h-7.19v-43.29h7.19v6.16c1.42-2.21,3.36-3.92,5.81-5.14,2.45-1.21,5.15-1.82,8.1-1.82,5.27,0,9.53,1.59,12.8,4.78Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m753.29,128.47c-2.63-1.13-4.71-2.71-6.24-4.74-1.53-2.03-2.37-4.36-2.53-6.99h7.43c.21,2.16,1.22,3.92,3.04,5.29,1.82,1.37,4.2,2.05,7.15,2.05,2.74,0,4.9-.6,6.48-1.82,1.58-1.21,2.37-2.74,2.37-4.58s-.84-3.3-2.53-4.23c-1.69-.92-4.29-1.83-7.82-2.73-3.21-.84-5.83-1.7-7.86-2.57-2.03-.87-3.77-2.16-5.21-3.87-1.45-1.71-2.17-3.96-2.17-6.75,0-2.21.66-4.24,1.97-6.08,1.32-1.84,3.19-3.3,5.61-4.38,2.42-1.08,5.19-1.62,8.29-1.62,4.79,0,8.66,1.21,11.61,3.63,2.95,2.42,4.53,5.74,4.74,9.95h-7.19c-.16-2.26-1.07-4.08-2.73-5.45-1.66-1.37-3.88-2.05-6.68-2.05-2.58,0-4.63.55-6.16,1.66-1.53,1.11-2.29,2.56-2.29,4.35,0,1.42.46,2.59,1.38,3.52.92.92,2.08,1.66,3.48,2.21,1.39.55,3.33,1.17,5.81,1.86,3.11.84,5.64,1.67,7.58,2.49s3.62,2.04,5.02,3.67c1.4,1.63,2.12,3.77,2.17,6.4,0,2.37-.66,4.5-1.97,6.4-1.32,1.9-3.17,3.38-5.57,4.46s-5.15,1.62-8.25,1.62c-3.32,0-6.29-.57-8.93-1.7Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path d="m812.3,129.46l-16.98-19.12v19.12h-7.19v-58.46h7.19v34.36l16.67-19.2h10.03l-20.38,21.57,20.46,21.72h-9.8Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+            <path
+              d="m829.04,77.71c-.95-.95-1.42-2.11-1.42-3.48s.47-2.53,1.42-3.48c.95-.95,2.11-1.42,3.48-1.42s2.44.47,3.36,1.42c.92.95,1.38,2.11,1.38,3.48s-.46,2.53-1.38,3.48c-.92.95-2.04,1.42-3.36,1.42s-2.53-.47-3.48-1.42Zm6.95,8.45v43.29h-7.19v-43.29h7.19Z"
+              style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 2px;" />
+          </svg>
+        <h6 class="text-2xl mt-6">No non-sense Fullstack Developer providing fast + secure websites for all types of
+          businesses!</h6>
+      </div>
+      <div class="px-10 md:mt-32">
+        <p class="text-sm">
+          Surrounded by friends in the industry, it was my early 20’s when I realized I not only had a knack for coding, but I
+          enjoyed it. I threw myself into learning the basics, and shortly after discovered the Laravel Framework, which motivated me to focus on PHP. Laravel to this day greatly appeals to me however, I have been working on my Javascript and React knowledge due to their popularity.
+          <br><br>
+          With a passion for coding and an eye for visual appeal, I take satisfaction in producing websites that are functioning,
+          engaging, and secure.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="skills" class="pt-20 px-10">
+    <div class="mx-auto text-white">
+      <h2 class="text-4xl text-center mt-20">"Coding is a piece of cake!"</h2>
+      <h4 class="text-2xl text-center"> Hover over cake layers to view individual skills.</h4>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="skills-img">
+        <svg class="mx-auto mt-32" id="cake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2901.36 1750.58">
+          <g style="isolation: isolate;">
+            <g class="bot" id="Plate_Bot" data-name="Layer 1">
+              <g>
+                <g id="plate">
+                  <path
+                    d="m2851.83,1283.37c0,253.36-627.32,458.74-1401.15,458.74S49.53,1536.73,49.53,1283.37s627.32-458.72,1401.15-458.72,1401.15,205.36,1401.15,458.72Z"
+                    style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                  <path
+                    d="m2892.9,1226.79c0,257.79-645.71,466.8-1442.21,466.8S8.47,1484.58,8.47,1226.79s645.7-466.81,1442.21-466.81,1442.21,209,1442.21,466.81Z"
+                    style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                  <path
+                    d="m2684.47,984.94c94.16,60.09,147.58,128.01,147.58,200.02,0,244.61-612.74,442.93-1368.55,442.93S94.93,1429.57,94.93,1184.96c0-103.32,109.54-198.27,292.67-273.6C152.19,994.43,8.47,1105.16,8.47,1226.79c0,257.79,645.7,466.8,1442.21,466.8s1442.21-209,1442.21-466.8c0-88.55-76.16-171.33-208.42-241.85Z"
+                    style="mix-blend-mode: multiply; stroke-width: 0px;" />
+                  <path
+                    d="m2328.85,1226.79c0,156.97-393.18,284.22-878.17,284.22s-878.17-127.25-878.17-284.22,393.18-284.24,878.17-284.24,878.17,127.25,878.17,284.24Z"
+                    style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                  <g>
+                    <path
+                      d="m444.63,934.25c-90.48,21.39-176.83,52.15-241.4,121.63-57.26,61.64-58.22,168.37,20.19,211.63,25.4,14.02,72.99-22.71,58.85-51.14-27.16-54.61-62.98-88.6-21.17-150.32,42.09-62.12,116.96-90.39,184.08-115.38,9.36-3.49,12.85-19.6-.55-16.42Z"
+                      style="mix-blend-mode: screen; opacity: .7; stroke-width: 0px;" />
+                    <path
+                      d="m312.83,1278.59c-1.21-2.71-2.78-5.16-4.61-7.46-9.54-12.06-28.98-4.5-38.19,3.51-5.82,5.06-10.52,11.81-12.31,19.38-1.21,5.16-1.26,14.14,3.52,17.94,2.28,1.82,4.37,4.13,7.03,5.34,11.3,5.14,23.98.6,32.9-7.14,7.92-6.9,16.56-20.57,11.66-31.57Z"
+                      style="mix-blend-mode: screen; opacity: .7; stroke-width: 0px;" />
+                  </g>
+                </g>
+                <g id="bot">
+                  <path
+                    d="m600.71,976.67c1.64,21.32,2.81,43.12,3.13,65.21,2.25,157.07,9.92,249.51,62.5,278.38,52.59,28.89,479.17,24.35,920.26,15.66,441.08-8.67,578.3-58.25,597.14-119.87,9.39-30.8,16.41-156.84,20.87-286.04-137.32,15.68-408.3,41.55-814.79,57.94-441.16,17.78-685.77.17-789.11-11.28Z"
+                    style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                  <g>
+                    <path d="m1436.38,1228.34c-19.19,9.81-8.65,40.54,15.17,28.36,19.2-9.81,8.68-40.54-15.17-28.36Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1913.86,1122.09c-19.2,9.82-8.67,40.54,15.17,28.36,19.2-9.79,8.67-40.52-15.17-28.36Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1898.84,986.03c-12.85,6.55-5.81,27.14,10.15,18.99,12.87-6.57,5.81-27.14-10.15-18.99Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1644.65,1033.07c-11.78,6.02-5.33,24.84,9.29,17.38,11.79-6,5.31-24.83-9.29-17.38Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m758.41,1020.51c-19.19,9.82-8.68,40.55,15.17,28.36,19.2-9.77,8.68-40.52-15.17-28.36Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m964.67,1187.99c-14.59,7.46-6.6,30.8,11.51,21.55,14.6-7.44,6.58-30.8-11.51-21.55Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1773.74,1243.74c-8.07,4.13-3.67,17.07,6.38,11.94,8.09-4.12,3.64-17.05-6.38-11.94Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1153.34,1316.54c-8.07,4.12-3.66,17.05,6.37,11.91,8.09-4.12,3.66-17.04-6.37-11.91Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m731.25,1190.85c-10.7,5.47-4.85,22.59,8.43,15.83,10.73-5.49,4.86-22.63-8.43-15.83Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m2066.46,1203.76c-10.7,5.47-4.85,22.61,8.45,15.81,10.72-5.46,4.85-22.59-8.45-15.81Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1393.77,1026.8c-10.7,5.47-4.85,22.61,8.45,15.83,10.72-5.47,4.85-22.61-8.45-15.83Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1548.39,1274.67c-5.38,2.73-2.43,11.33,4.23,7.92,5.36-2.76,2.43-11.33-4.23-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1205.96,1217.18c-5.38,2.75-2.43,11.33,4.23,7.94,5.36-2.75,2.43-11.31-4.23-7.94Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m863.4,1124.1c-5.36,2.71-2.43,11.31,4.23,7.92,5.36-2.75,2.41-11.33-4.23-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m637.2,1128.84c-5.38,2.73-2.45,11.33,4.22,7.92,5.38-2.75,2.41-11.33-4.22-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m902.96,1311.38c-5.38,2.75-2.45,11.33,4.23,7.92,5.36-2.73,2.41-11.31-4.23-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1611.67,1166.65c-5.37,2.75-2.45,11.33,4.22,7.92,5.38-2.75,2.42-11.31-4.22-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1946.04,1255.55c-5.37,2.73-2.43,11.33,4.22,7.92,5.36-2.75,2.45-11.33-4.22-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1324.84,1279.4c-5.38,2.75-2.43,11.33,4.22,7.94,5.38-2.76,2.45-11.33-4.22-7.94Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m2109.99,1037.8c-5.36,2.75-2.45,11.33,4.23,7.92,5.36-2.75,2.41-11.33-4.23-7.92Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1006.58,1038.89c-8.09,4.12-3.67,17.05,6.37,11.94,8.09-4.13,3.66-17.07-6.37-11.94Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                    <path d="m1232.09,1118.79c-12.52,6.4-5.64,26.48,9.92,18.52,12.54-6.4,5.64-26.48-9.92-18.52Z"
+                      style="mix-blend-mode: multiply; opacity: .6; stroke-width: 0px;" />
+                  </g>
+                  <path
+                    d="m724.92,987c113.84,120.01,319.81,234.14,691.69,234.14s563.33-135.01,668.19-278.58c-153.2,14.8-384.38,32.85-694.98,45.38-315.35,12.7-530.22,7.33-664.9-.94Z"
+                    style="fill: none; stroke-width: 0px;" />
+                  <path
+                    d="m1416.61,1221.15c-371.88,0-577.85-114.14-691.69-234.14-53.74-3.31-94.74-7.08-124.21-10.34,1.64,21.32,2.81,43.12,3.13,65.21,2.25,157.07,9.92,249.51,62.5,278.38,52.59,28.89,479.17,24.35,920.26,15.66,441.08-8.67,578.3-58.25,597.14-119.87,9.39-30.8,16.41-156.84,20.87-286.04-32.42,3.71-72.52,7.99-119.81,12.55-104.86,143.57-301.03,278.58-668.19,278.58Z"
+                    style="mix-blend-mode: multiply; opacity: .7; stroke-width: 0px;" />
+                </g>
+              </g>
+            </g>
+            <g class="mid" id="mid" data-name="Layer 4">
+              <path
+                d="m1847.13,736.73c-281,15.89-590.04,30.37-968.19,30.37-167.62,0-254.48,17.2-300.55,13.76,4.28,48.99,16.57,118.78,22.48,195.82,103.34,11.44,347.95,29.06,789.11,11.28,406.49-16.39,677.47-42.26,814.79-57.94,2.76-79.78,4.52-160.69,5.29-221.21-76.91,13.99-193.22,18.33-362.93,27.92Z"
+                style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+              <path
+                d="m578.39,780.85c4.28,48.99,16.57,118.78,22.48,195.82,29.47,3.26,70.47,7.03,124.21,10.34-71.38-75.22-106.54-152.72-123.61-205.89-8.6.26-16.32.23-23.07-.26Z"
+                style="mix-blend-mode: multiply; opacity: .7; stroke-width: 0px;" />
+              <path
+                d="m2084.96,942.57c47.28-4.56,87.39-8.85,119.81-12.55,2.76-79.78,4.52-160.69,5.29-221.21-6.4,1.16-13.18,2.25-20.13,3.27-15.13,64.01-45.22,148.64-104.97,230.49Z"
+                style="mix-blend-mode: multiply; opacity: .7; stroke-width: 0px;" />
+            </g>
+            <g class="top" id="top">
+              <g id="glaze" data-name="Layer 3">
+                <path
+                  d="m879.33,765.44c378.15,0,687.19-14.47,968.19-30.37,169.71-9.59,286.02-13.93,362.93-27.92.46-37.76.55-67.63.21-84.17-.12-5.95-1.97-12.4-5.03-19.22-47.7,30.43-411.36,68.95-850.96,78.41-479.58,10.32-768.4,29.95-768.4,29.95-9.63,9.28-10.45,33.31-7.49,67.07,46.06,3.44,132.92-13.76,300.55-13.76Z"
+                  style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                <path
+                  d="m2205.64,603.77c-41.2-91.38-329.95-251.34-375.2-266.61-48.62-16.39-1144.63,278.96-1244.16,374.97,0,0,288.82-19.63,768.4-29.95,439.61-9.46,803.26-47.98,850.96-78.41Z"
+                  style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                <path
+                  d="m1830.44,337.16c-48.62-16.39-1144.63,278.96-1244.16,374.97,0,0,288.82-19.63,768.4-29.95,439.61-9.46,803.26-47.98,850.96-78.41-41.2-91.38-329.95-251.34-375.2-266.61Zm-340.92,279.31c-1092.45,95.66-545.52-36.06-225.89-125.27,441.51-123.22,546.68-153.68,685.06-64.2,138.4,89.48,80.1,142.25-459.17,189.47Z"
+                  style="mix-blend-mode: multiply; opacity: .5; stroke-width: 0px;" />
+                <g>
+                  <path
+                    d="m1351.78,484.67c-99.98,29.17-205.35,39.35-304.33,69.22-21.25,6.42-25.22,44.44,1.16,34.81,45.45-16.56,94.87-22.34,141.29-36.1,56.73-16.84,108.2-35.43,162.2-58.98,4.76-2.08,7.03-11.08-.31-8.95Z"
+                    style="mix-blend-mode: screen; opacity: .6; stroke-width: 0px;" />
+                  <path
+                    d="m996.11,585.05c-.17-.28-.36-.55-.51-.84-3.06-4.85-12.16-3.36-15.94-.68-.1.07-.16.13-.25.2-7.1,2.65-12.92,8.91-12.85,16.94.03,2.76.28,6.15,2.56,8.1,7.67,6.55,19.22,2.43,24.66-5.36.21-.28.4-.6.63-.88,3.95-5.66,5.51-11.43,1.7-17.48Z"
+                    style="mix-blend-mode: screen; opacity: .6; stroke-width: 0px;" />
+                </g>
+              </g>
+              <g id="Cherry" data-name="Layer 2">
+                <path d="m1567.28,513.98c267.5,47.4,338.02-357.44,43.45-354.94-218.6,1.9-311,307.54-43.45,354.94"
+                  style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                <path d="m1567.28,513.98c236.41,41.89,318.8-269.27,131.42-340.45,78.76,40.22,84.2,156.99-45.32,188.53"
+                  style="mix-blend-mode: multiply; stroke-width: 0px;" />
+                <path
+                  d="m1653.38,362.05c-184.26,44.82-226.52-129.6-89.34-186.26,25.7-10.6,49.42-15.36,70.94-15.88-7.86-.56-15.84-.94-24.25-.88-218.6,1.9-311,307.54-43.45,354.94"
+                  style="mix-blend-mode: multiply; stroke-width: 0px;" />
+                <path
+                  d="m1554.74,198.47s8.04,5.33,20.09,11.05c5.97,2.98,13.15,5.66,20.71,8.09,7.69,2.05,15.84,3.99,24.18,4.2,8.3.83,16.6-.25,24.56-1.14,3.87-.96,7.72-1.72,11.41-2.43,3.66-.83,7.01-2.15,10.27-2.98,6.58-1.62,11.74-4.1,15.7-5.28,3.9-1.29,6.28-1.93,6.28-1.93,0,0-1.52,1.8-4.45,4.78-3.03,2.81-7.05,7.53-13.3,11.18-3.04,1.92-6.24,4.38-10.07,6.07-3.85,1.67-7.94,3.57-12.32,5.08-4.53.99-9.2,2.5-14.11,3.09-4.93.13-9.97.98-15.02.46-5.04-.5-10.06-1.06-14.84-2.43-4.9-.88-9.29-3.09-13.63-4.78-8.42-4.07-15.63-8.88-20.87-14.01-10.87-9.84-14.6-19.02-14.6-19.02Z"
+                  style="stroke-width: 0px;" />
+                <path id="stem"
+                  d="m1630.18,230.34s66.54-148.54-33.59-221.87l-21.93,24.96c6.17,9.79,85.72,53.62,40.21,197.74l15.31-.83Z"
+                  style="stroke: #5e2c00; stroke-linecap: round; stroke-linejoin: round; stroke-width: 16.94px;" />
+                <path
+                  d="m1481.64,298.07c4.17-26.91,15.66-52.71,31.41-74.74,3.85-5.41-2.18-9.61-6.75-5.33-43.43,40.92-101.27,158.36-36.5,203.89"
+                  style="mix-blend-mode: screen; stroke-width: 0px;" />
+                <g>
+                  <path d="m1469.8,421.89c16.54,11.61,45.21-21.77,26.35-35.33-23.49-16.87-18.33-63.62-14.51-88.5"
+                    style="mix-blend-mode: screen; stroke-width: 0px;" />
+                  <path d="m1539,421.73c-19.4,0-34.15,35.28-8.32,35.28,19.4,0,34.14-35.28,8.32-35.28Z"
+                    style="mix-blend-mode: screen; stroke-width: 0px;" />
+                </g>
+              </g>
+            </g>
+      
+        </svg>
+      </div>
+
+      <div class="skills-txt text-center md:text-start my-auto text-white mb-20 pt-2 md:pt-20">
+        <div class="section frontend text-2xl md:text-3xl pt-2">
+          <h3>Frontend</h3>
+          <div id="frontend"></div>
+        </div>
+
+        <div class="section tools text-2xl md:text-3xl pt-2">
+          <h3>Tools</h3>
+          <div id="tools"></div>
+        </div>
+
+        <div class="section backend text-2xl md:text-3xl pt-2">
+          <h3>Backend</h3>
+          <div id="backend"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- @foreach ($projects as $project)
+  <x-project-card :image="$project['image']" :title="$project['title']" :description="$project['description']"
+    :githubLink="$project['githubLink']" :liveSiteLink="$project['liveSiteLink']" />
+  @endforeach -->
+
+  <section id="projects" class="py-16 mt-20 px-10">
+    <div class="container mx-auto">
+      <h2 class="text-4xl mb-8 text-white">Completed Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Portfolio Item 1 -->
+        <div
+          class="bg-zinc-700 p-6 rounded-lg shadow transition duration-300 ease-in-out transform hover:-translate-y-2">
+          <!-- <img src="/images/PW_Site_1.png" alt="Project 1" class="mb-4 rounded-lg"> -->
+          <h3 class="text-xl text-white font-semibold mb-2">First Website</h3>
+          <p class="text-gray-200">Completely rebuilt the webpage of an Automotive business, which included building a
+            blog app that has an admin login with fully-functional CRUD. This was my first website ever created.</p>
+          <div class="flex mt-10 justify-center">
+            <a href="#" class="text-white">
+              <img class="w-16" src="../imgs/github.png" alt="">
+              <p class="mt-1">Source Code</p>
+            </a>
+            <a href="#" class="text-white ms-20">
+              <img class="w-24" src="../imgs/eye.png" alt="">
+              <p class="mt-4">View Live Site</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- Add Contact (email!)-->
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+        class="hover:underline">Charlene Kochanski</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+        <a href="./index.html#about" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li>
+        <a href="./index.html#contact" class="hover:underline">Contact</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

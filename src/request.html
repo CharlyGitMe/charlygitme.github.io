@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Resume</title>
+  <link href="./output.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script>
+ emailjs.init('zp6T_hnyP0J9B8T-v');
+
+  function onSubmit(token) {
+    // Check the honeypot field
+    let hnpt = document.getElementById('hnpt').value;
+    if (hnpt) {
+      alert('Spam detected. Please do not fill out hidden fields.');
+      return;
+    }
+
+    document.querySelector('.loader').style.display = 'block';
+    document.getElementById('success-message').style.display = 'none';
+    document.getElementById('resume-form').style.display = 'none';
+
+    // Proceed with form submission after reCAPTCHA validation
+    emailjs.sendForm('resume_service', 'resume_form', document.getElementById('resume-form'))
+      .then(() => {
+        console.log('SUCCESS!');
+        document.querySelector('.loader').style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+        document.getElementById('resume-form').reset(); // Clear the form
+      }, (error) => {
+        console.log('FAILED...', error);
+        // Hide loader and show an alert
+        document.querySelector('.loader').style.display = 'none';
+        alert('Failed to send email. Please try again.');
+      });
+  }
+</script>
+</head>
+<body>
+
+<!-- Navigation Menu MD -->
+<nav class="pt-6">
+  <div class="flex justify-between">
+    <!--Logo-->
+    <div class="ps-10">
+      <a href="./index.html">
+        <img src="/imgs/CK_LogoFINAL.png" alt="" class="w-32">
+      </a>
+    </div>
+    <!--Menu Items-->
+    <ul class="hidden text-lg md:flex space-x-20 pe-20 my-auto text-white">
+      <li>
+        <a class="hover:text-emerald-600 transition" href="/#about">About Me</a>
+      </li>
+      <li>
+        <a class="hover:text-emerald-600 transition" href="/#skills">Skills</a>
+      </li>
+      <li>
+        <a class="hover:text-emerald-600 transition" href="/#projects">Projects</a>
+      </li>
+    </ul>
+    <button class="hamburger pe-6 pb-4 top-10 md:hidden me-20 menu-btn">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </div>
+</nav>
+
+    <nav class="hidden md:hidden justify-center py-4 bg-slate-700 mt-2 menu">
+      <ul class="text-white pe-14 space-y-2">
+        <li><a href="./index.html#about" class="text-lg hover:text-pink-700 transition">About Me</a></li>
+        <li><a href="./index.html#skills" class="text-lg hover:text-pink-700 transition">Skills</a></li>
+        <li><a href="./index.html#projects" class="text-lg hover:text-pink-700 transition">Projects</a></li>
+      </ul>
+    </nav>
+
+
+<!-- Note: Since github pages does not support email sending, I am currently using EmailJS -->
+<div class="max-w-sm mx-auto mt-20 text-white">
+  <h1 class="text-4xl">Request my Resume</h1>
+</div>
+<section class="max-w-sm mx-auto mt-10 p-10 rounded shadow-md" id="form-section">
+  <form id="resume-form">
+    <div class="mb-5">
+      <label for="busname" class="block mb-2 text-sm font-medium text-gray-900">Your Business Name</label>
+      <input type="text" id="busname" name="busname"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+        placeholder="Business Name" required />
+    </div>
+    <div class="mb-5">
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
+      <input type="email" id="email" name="email"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="example@domain.com" required />
+    </div>
+    <div style="display:none;">
+      <label for="hnpt">Leave this field empty</label>
+      <input type="text" id="hnpt" name="hnpt" />
+    </div>
+    <button type="submit" id="submit-btn"
+      class="text-white font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center transition g-recaptcha"
+      data-sitekey="6Le6hiwqAAAAADkofeE9Qm4SAJsCdWTysVOymlp6" data-callback="onSubmit">
+      Submit
+    </button>
+  </form>
+<!-- loader -->
+  <div class="loader mx-auto" style="display: none;"></div>
+
+<!-- Success message -->
+<div id="success-message" style="display: none;">
+  <p class="mb-2">Thanks for requesting my resume. Check your email folder within the next 24h to hear back!</p>
+  <a href="./index.html" id="return-btn" class="button cursor-pointer text-white font-medium rounded-lg w-full sm:w-auto px-3 py-1 text-center transition">Return</a>
+</div>
+</section>
+<div class="flex justify-center mt-10 text-white mx-4">
+  <p class="text-lg">Note: Requests may take up to 24h, please check your spam folder!</p>
+</div>
+
+<!-- Add Contact (email!)-->
+<footer class="bg-white mt-48 rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+        class="hover:underline">Charlene Kochanski</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline">Contact</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.menu-btn')
+    const nav = document.querySelector('.menu')
+
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open')
+      nav.classList.toggle('flex')
+      nav.classList.toggle('hidden')
+    });
+</script>
+</body>
+</html>
